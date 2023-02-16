@@ -2,27 +2,35 @@ import 'package:flutter/material.dart';
 
 class StatelessLearn extends StatelessWidget {
   const StatelessLearn({super.key});
+  final String title1 = 'Mahir';
+  final String title2 = 'Burak';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(children: const [
-        TitleTextWidget(title: 'Mahir'),
-        NulableTitleTextWidget(title: 'Burak'),
-        NulableTitleTextWidget(),
+      body: Column(children: [
+        TitleTextWidget(title: title1),
+        _emptyBox(),
+        NulableTitleTextWidget(title: title2),
+        _emptyBox(),
+        const NulableTitleTextWidget(),
+        _emptyBox(),
       ]),
     );
   }
+
+  SizedBox _emptyBox() => const SizedBox(height: 10);
 }
 
 class NulableTitleTextWidget extends StatelessWidget {
   const NulableTitleTextWidget({super.key, this.title});
   final String? title;
+  final String title3 = 'Efe';
 
   @override
   Widget build(BuildContext context) {
-    return Text(title ?? "Efe");
+    return Text(title ?? title3);
   }
 }
 

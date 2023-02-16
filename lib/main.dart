@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '101/appBar_view.dart';
-import '101/color_learn.dart';
-import '101/icon_learn.dart';
-import '101/stateless_learn.dart';
+
+import '101/image_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +24,7 @@ class MyApp extends StatelessWidget {
               .light, //saat ve wifi gibi işaretlerin tema rengi
         ),
       ),
-      home: const StatelessLearn(),
+      home: const ImageLearnView(),
     );
   }
 }
