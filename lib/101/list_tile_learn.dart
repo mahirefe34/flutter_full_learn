@@ -13,7 +13,7 @@ class ListTileLearn extends StatelessWidget {
             child: ListTile(
               title: const Text('My Card'),
               subtitle: const Text('How do you do?'),
-              leading: const Icon(Icons.card_travel),
+              leading: const Icon(Icons.medical_information_outlined),
               trailing: const Icon(Icons.chevron_right_outlined),
               onTap: () {},
               dense: true, //olabildiğince sıkıştırmayı sağlıyor.
