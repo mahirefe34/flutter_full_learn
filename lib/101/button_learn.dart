@@ -22,9 +22,10 @@ class ButtonLearn extends StatelessWidget {
               child: Text('Text Button',
                   style: Theme.of(context).textTheme.titleSmall),
             ),
-            const ElevatedButton(
-              onPressed: null, //Tıklanması istemediğimiz durumda.
-              child: Text('Elevated Button'),
+            ElevatedButton(
+              // onPressed: null, //Tıklanması istemediğimiz durumda.
+              onPressed: () {},
+              child: const Text('Elevated Button'),
             ),
             IconButton(
               onPressed: () {},
