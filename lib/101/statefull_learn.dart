@@ -74,3 +74,6 @@ class _StatefullLearnState extends State<StatefullLearn> {
     );
   }
 }
+
+
+// Temelden zirveye 6 -- dakika 20 de kaldım. 
