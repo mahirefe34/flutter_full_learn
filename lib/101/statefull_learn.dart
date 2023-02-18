@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/product/language/language_items.dart';
+
+import '../product/counter_hello_button.dart';
 
 class StatefullLearn extends StatefulWidget {
   const StatefullLearn({super.key});
@@ -9,6 +12,7 @@ class StatefullLearn extends StatefulWidget {
 
 class _StatefullLearnState extends State<StatefullLearn> {
   int _counterValue = 0;
+  final String _welcomeTitle = LanguageItems.welcomeTitle;
 
   /* void incrementValue() {
     setState(() {
@@ -37,12 +41,20 @@ class _StatefullLearnState extends State<StatefullLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Center(
-          child: Text(
-        _counterValue.toString(),
-        style: Theme.of(context).textTheme.headlineLarge,
-      )),
+      appBar: AppBar(
+        title: Text(_welcomeTitle),
+      ),
+      body: Column(
+        children: [
+          Center(
+              child: Text(
+            _counterValue.toString(),
+            style: Theme.of(context).textTheme.headlineLarge,
+          )),
+          const Placeholder(),
+          const CounterHelloButton(), //State tekrar çizilmesin diye product altında ayrıldı.
+        ],
+      ),
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -55,6 +67,7 @@ class _StatefullLearnState extends State<StatefullLearn> {
   }
 
   FloatingActionButton _incrementButton() {
+    print('a');
     return FloatingActionButton(
       onPressed: () {
         // incrementValue();
@@ -65,6 +78,8 @@ class _StatefullLearnState extends State<StatefullLearn> {
   }
 
   FloatingActionButton _decrementButton() {
+    print('b');
+
     return FloatingActionButton(
       onPressed: () {
         //decrementValue();
@@ -74,6 +89,3 @@ class _StatefullLearnState extends State<StatefullLearn> {
     );
   }
 }
-
-
-// Temelden zirveye 6 -- dakika 20 de kaldım. 
