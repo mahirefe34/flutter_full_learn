@@ -1,0 +1,1 @@
+//video 7 dakika 1:17:00 da kaldım.
