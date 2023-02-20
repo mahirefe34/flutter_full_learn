@@ -84,6 +84,8 @@ class _ServicePostLearnViewState extends State<ServicePostLearnView> {
                             userId: int.tryParse(_userIdController.text),
                           );
                           _addItemToService(model);
+
+                          // Video 9 Dakika 1:11:00 da kaldım
                         }
                       },
                 child: const Text('Send')),
