@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '101/navigation_learn.dart';
+import '202/model_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +16,12 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       //theme: ThemeData.light()
       theme: ThemeData.dark().copyWith(
+          tabBarTheme: const TabBarTheme(
+            indicatorColor: Colors.red,
+            unselectedLabelColor: Colors.pink,
+            labelColor: Colors.white54,
+            indicatorSize: TabBarIndicatorSize.label,
+          ),
           appBarTheme: const AppBarTheme(
             centerTitle: true,
             backgroundColor: Colors.transparent,
@@ -25,7 +31,7 @@ class MyApp extends StatelessWidget {
           ),
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.white)),
-      home: const NagigationLearn(),
+      home: const ModelLearnView(),
     );
   }
 }
