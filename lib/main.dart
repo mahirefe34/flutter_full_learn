@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '202/model_learn_view.dart';
+import '202/service/service_post_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           ),
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.white)),
-      home: const ModelLearnView(),
+      home: const ServicePostLearnView(),
     );
   }
 }
