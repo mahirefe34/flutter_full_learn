@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'demos/my_collections_demos.dart';
+import '101/navigation_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
           ),
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Colors.white)),
-      home: const MyCollectionsDemos(),
+      home: const NagigationLearn(),
     );
   }
 }
