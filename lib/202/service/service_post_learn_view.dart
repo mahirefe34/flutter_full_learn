@@ -38,7 +38,9 @@ class _ServicePostLearnViewState extends State<ServicePostLearnView> {
     final responce = await _networkManager.post('posts', data: postModel);
 
     if (responce.statusCode == HttpStatus.created) {
-      name = 'Başarılı';
+      setState(() {
+        name = 'Başarılı';
+      });
     }
     _changeLoading();
   }
@@ -47,6 +49,7 @@ class _ServicePostLearnViewState extends State<ServicePostLearnView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          title: Text(name ?? ''),
           actions: [
             _isLoading
                 ? const CircularProgressIndicator.adaptive()

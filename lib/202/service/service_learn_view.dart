@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn/202/service/comment_learn_view.dart';
 import 'package:flutter_full_learn/202/service/post_model.dart';
 
 class ServiceLearnView extends StatefulWidget {
@@ -21,7 +22,7 @@ class _ServiceLearnViewState extends State<ServiceLearnView> {
   void initState() {
     super.initState();
     _networkManager = Dio(BaseOptions(baseUrl: _baseUrl));
-    fetchPostItems();
+    fetchPostItemsAdvance();
   }
 
   void _changeLoading() {
@@ -93,6 +94,11 @@ class _PostCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 20),
       child: ListTile(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => CommentLearnView(postId: _model?.id),
+          ));
+        },
         leading: Text(_model?.id.toString() ?? 'data'),
         title: Text(_model?.title.toString() ?? 'data'),
         subtitle: Text(_model?.body.toString() ?? 'data'),
