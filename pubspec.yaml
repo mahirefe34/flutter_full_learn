@@ -33,6 +33,9 @@ dependencies:
 
   dio: ^5.0.0
 
+  #cache
+  shared_preferences: ^2.0.18
+
   #Google
   url_launcher: ^6.1.9
   
