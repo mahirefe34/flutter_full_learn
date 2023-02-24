@@ -12,7 +12,11 @@ class ButtonLearn extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
+              onLongPress: () {
+                print('uzun bastım');
+              },
               onPressed: () {
+                print('bastım');
                 //servise istek at
                 //sayfanın rengini düzenle
               },
@@ -20,7 +24,7 @@ class ButtonLearn extends StatelessWidget {
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.red)),
               child: Text('Text Button',
-                  style: Theme.of(context).textTheme.titleSmall),
+                  style: Theme.of(context).textTheme.headlineLarge),
             ),
             ElevatedButton(
               // onPressed: null, //Tıklanması istemediğimiz durumda.
@@ -73,7 +77,7 @@ class ButtonLearn extends StatelessWidget {
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
