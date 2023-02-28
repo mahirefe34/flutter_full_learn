@@ -1,10 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn/202/theme/light_theme.dart';
+import 'package:flutter_full_learn/product/global/resource_context.dart';
+import 'package:flutter_full_learn/product/global/theme_notifier.dart';
+import 'package:provider/provider.dart';
 
-import '303/feed_view.dart';
+import '303/reqres_resource/view/reqres_view_with_provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      Provider<ResourceContext>(
+        create: (_) => ResourceContext(),
+      ),
+      ChangeNotifierProvider<ThemeNotifier>(
+          create: (context) => ThemeNotifier())
+    ],
+    builder: (context, child) {
+      return const MyApp();
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +28,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       //theme: ThemeData.light()
-      theme: LightTheme().theme,
+      theme: context.watch<ThemeNotifier>().currentTheme, // LightTheme().theme,
 
       // ThemeData.dark().copyWith(
       //   tabBarTheme: const TabBarTheme(
@@ -35,7 +48,7 @@ class MyApp extends StatelessWidget {
       //       const ProgressIndicatorThemeData(color: Colors.white),
       // ),
 
-      home: const FeedView(),
+      home: const ReqresViewWithProvider(),
     );
   }
 }

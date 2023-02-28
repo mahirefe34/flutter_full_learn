@@ -33,12 +33,17 @@ dependencies:
 
   dio: ^5.0.0
 
+  #state_management
+  provider: ^6.0.5
+
   #cache
   shared_preferences: ^2.0.18
   flutter_secure_storage: ^8.0.0
 
   #Google
   url_launcher: ^6.1.9
+  json_serializable: ^6.6.1
+  json_annotation: ^4.8.0
   
   #Animation
   flutter_spinkit: ^5.1.0
