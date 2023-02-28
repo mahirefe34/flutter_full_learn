@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 class UserManagement<T extends AdminUser> {
   final T admin;
 
@@ -40,6 +41,13 @@ class GenericUser {
   final int money;
 
   GenericUser(this.name, this.id, this.money);
+
+  bool findUserName(String name) {
+    return this.name == name;
+  }
+
+  @override
+  String toString() => 'GenericUser(name: $name, id: $id, money: $money)';
 }
 
 class AdminUser extends GenericUser {
