@@ -7,7 +7,7 @@ part of 'token_model.dart';
 // **************************************************************************
 
 TokenModel _$TokenModelFromJson(Map<String, dynamic> json) => TokenModel(
-      json['token'] as String?,
+      token: json['token'] as String?,
     );
 
 Map<String, dynamic> _$TokenModelToJson(TokenModel instance) =>

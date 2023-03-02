@@ -7,7 +7,7 @@ part 'token_model.g.dart';
 class TokenModel extends INetworkModel<TokenModel> {
   final String? token;
 
-  TokenModel(this.token);
+  TokenModel({this.token});
 
   @override
   TokenModel fromJson(Map<String, dynamic> json) {
